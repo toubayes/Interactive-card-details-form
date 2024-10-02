@@ -1,0 +1,266 @@
+    /* start variable  */
+    :root{
+    --Linear-gradient-active--input-border-: hsl(249, 99%, 64%) , hsl(278, 94%, 30%);
+    --Red-input-errors: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    }
+    /* end variable  */
+    /* Start Global Rules */
+    * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+    position: relative;
+    background-color: var(--White);
+    }
+
+    /* End Global Rules */
+    .page{
+    display: flex;
+    flex-wrap: wrap;
+
+    }
+    .page  .card{
+    width: 400px; 
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    }
+
+
+    .page  .information{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(100% - 400px);
+
+    }
+    .card-info form{
+    display: flex;
+    flex-direction: column;
+    }
+    .card-info form label{
+    color: var(--Very-dark-violet);
+    font-weight: 500;
+    font-size: 18;
+    }
+    .card-info form> input{
+    padding: 15px;
+    outline: none;
+    border: 1px solid var(--Dark-grayish-violet);
+    margin: 10px 0;
+    width: 340px;
+
+
+    }
+    .card-info form> label:nth-child(2){
+    margin-top: 30px;
+    }
+    .expercvc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 30px;
+    }
+    .expercvc input{
+    width: 80px;
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--Dark-grayish-violet);
+    }
+    .cvc{
+    display: flex;
+    flex-direction: column;
+    }
+    button{
+    padding: 14px;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    text-transform: capitalize;
+    border: none;
+    margin-top: 30px;
+
+    }
+    /* start styling the face of the card  */
+    .page .card .twofaces .face_card{
+    width: 450px;
+    max-width: 100%;
+    height: 240px;
+    padding: 20px;
+    border-radius: 14px;
+    background-image: url(images/bg-card-front.png);
+    position: absolute;
+    left: 120px;
+    top: 30px;
+    }
+    .page .card .twofaces .face_card .information_card{
+    margin-top: 1px;
+    }
+    .page .card .twofaces .face_card .information_card .card_numbre{
+    color: var(--White);
+    font-size: 36px;
+    }
+    .page .card .twofaces .face_card .information_card .owner{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+
+    }
+    .page .card .twofaces .face_card .information_card .owner p{
+    color: var(--White);
+    }
+    /* end styling the face of the card  */
+    /* start styling the back of the card */
+    .page .card .twofaces .back_card{
+    width: 450px;
+    max-width: 100%;
+    height: 240px;
+    border-radius: 14px;
+    background-image: url(images/bg-card-back.png);
+    position: absolute;
+    left: 160px;
+    top: 290px;  
+    padding: 20px;
+    }
+    .page .card .twofaces .back_card  .code_cvc{
+    color: var(--White);
+    font-size: 18px;
+    right: 55px;
+    position: absolute;
+    bottom: 93px;
+    }
+
+    /* end styling the back of the card */
+    /* mobile design */
+    @media (max-width:740px) {
+    .page .card{
+    width: 100%;
+    height: 240px;
+    }
+    .page  .information{
+    height: 110vh;
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    }
+    /* start styling the face of the card  */
+    .page .card .twofaces .face_card{
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
+    z-index: 2;
+
+    left: 120px;
+    top: 130px;
+    }
+
+    .page .card .twofaces .face_card .information_card .card_numbre{
+    color: var(--White);
+    font-size: 26px;
+    }
+    .page .card .twofaces .face_card .information_card .owner{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+
+    }
+    .page .card .twofaces .face_card .information_card .owner p{
+    color: var(--White);
+    }
+    /* end styling the face of the card  */
+    /* start styling the back of the card */
+    .page .card .twofaces .back_card{
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
+    z-index: 1;
+
+    left: 160px;
+    top: 30px;  
+    padding: 20px;
+    }
+    .page .card .twofaces .back_card  .code_cvc{
+    color: var(--White);
+    font-size: 18px;
+    right: 55px;
+    position: absolute;
+    bottom: 111px;
+    }
+
+    }
+    @media (max-width:540px) {
+    .page .card .twofaces .face_card{
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
+    z-index: 2;
+
+    left: 30px;
+    top: 130px;
+    }
+
+    .page .card .twofaces .back_card{
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
+    z-index: 1;
+
+    left: 90px;
+    top: 30px;  
+    padding: 20px;
+    }
+    }
+    /* start design the complete state  */
+    .complete_state{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+    .complete_state  h1{
+    font-size: 30px;
+    color: var(--Very-dark-violet);
+    font-weight: 700;
+    font-weight: 500;
+    }
+    .complete_state p{
+    font-size: 18px;
+    width: 250px;
+    font-weight: 500;
+    color: var(--Very-dark-violet);
+    }
+    .complete_state button{
+    width: 230px;
+    font-weight: 500;
+    outline: none;
+
+    }
+
+    /* end the complete state  */
